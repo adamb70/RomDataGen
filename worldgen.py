@@ -1,6 +1,6 @@
 import os
 import zipfile
-from flask import Flask, send_file, render_template, Blueprint
+from flask import send_file, render_template, Blueprint
 
 from RomUtilityScripts.WorldGen.VoxelMaterials import GenerateVoxelMatFiles
 from RomUtilityScripts.WorldGen.Environment import GenerateEnvironementFiles
