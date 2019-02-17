@@ -3,7 +3,7 @@ import glob
 import zipfile
 from flask import Flask, send_file, render_template
 
-from RomUtilityScriptsBase import settings
+from RomUtilityScripts.RomUtilityScriptsBase import settings
 from RomUtilityScripts.Alchemy.GenerateFiles import generate_alchemy_files
 from worldgen import worldgen_blueprint
 from validator import validator_blueprint
