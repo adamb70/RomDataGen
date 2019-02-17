@@ -1,8 +1,10 @@
 import os
+import sys
 import glob
 import zipfile
 from flask import Flask, send_file, render_template
 
+sys.path.append('./RomUtilityScripts')
 from RomUtilityScripts.RomUtilityScriptsBase import settings
 from RomUtilityScripts.Alchemy.GenerateFiles import generate_alchemy_files
 from worldgen import worldgen_blueprint
