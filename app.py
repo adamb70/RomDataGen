@@ -4,7 +4,7 @@ import glob
 import zipfile
 from flask import Flask, send_file, render_template
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(os.path.dirname(__file__))
 from RomUtilityScripts.RomUtilityScriptsBase import settings
 from RomUtilityScripts.Alchemy.GenerateFiles import generate_alchemy_files
 from worldgen import worldgen_blueprint
