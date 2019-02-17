@@ -4,10 +4,6 @@ import glob
 import zipfile
 from flask import Flask, send_file, render_template
 
-sys.path.append(os.path.dirname(__file__))
-sys.path.append(os.path.join(os.path.dirname(__file__), 'RomUtilityScripts'))
-import RomUtilityScripts
-print('DIRNAME', os.path.dirname(__file__))
 from RomUtilityScripts.RomUtilityScriptsBase import settings
 from RomUtilityScripts.Alchemy.GenerateFiles import generate_alchemy_files
 from worldgen import worldgen_blueprint
@@ -16,10 +12,11 @@ from validator import validator_blueprint
 
 proj_path = os.path.abspath(os.path.dirname(__file__))
 settings.KEYFILE = os.path.join(proj_path, 'Mistvalin-b3c187e87518.json')
-
 settings.KEYFILE_TEXT = os.environ.get('KEYFILE')
 settings.GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
 
+if not os.path.exists('./Output'):
+    os.makedirs('./Output')
 
 rom_data_gen = Flask(__name__)
 rom_data_gen.register_blueprint(worldgen_blueprint)
