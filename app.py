@@ -47,7 +47,7 @@ def build_all_alchemy_data(generate_ground):
         zipf.write(fp, filename)
     zipf.close()
 
-    return send_file('Output/AlchemyData.zip', mimetype='zip', attachment_filename='AlchemyData.zip', as_attachment=True)
+    return send_file('Output/AlchemyData.zip', mimetype='zip', attachment_filename='AlchemyData.zip', as_attachment=True, cache_timeout=-1)
 
 
 
@@ -60,7 +60,7 @@ def build_all_alchemy_data(generate_ground):
 def test():
     filepath = 'Output/VoxelMaterials.sbc'
     filename = os.path.basename(filepath)
-    return send_file(filepath, mimetype='text/xml', attachment_filename=filename, as_attachment=True)
+    return send_file(filepath, mimetype='text/xml', attachment_filename=filename, as_attachment=True, cache_timeout=-1)
 
 
 if __name__ == '__main__':
