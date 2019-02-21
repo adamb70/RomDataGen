@@ -15,8 +15,7 @@ settings.KEYFILE = os.path.join(proj_path, 'Mistvalin-b3c187e87518.json')
 settings.KEYFILE_TEXT = os.environ.get('KEYFILE')
 settings.GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
 
-if not os.path.exists('./Output'):
-    os.makedirs('./Output')
+os.makedirs('./Output', exist_ok=True)
 
 rom_data_gen = Flask(__name__)
 rom_data_gen.register_blueprint(worldgen_blueprint)
