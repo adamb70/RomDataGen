@@ -27,3 +27,7 @@ def unused_icons():
 def unused_models():
     missing_models = Validation.find_unused_models_git(GithubFiles.get_data_urls())
     return render_template('listview.html', items=missing_models)
+
+@validator_blueprint.route('/validator/list_blocks')
+def list_blocks():
+    GithubFiles.list_cubeblocks_git()

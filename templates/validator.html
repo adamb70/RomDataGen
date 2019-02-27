@@ -52,6 +52,20 @@
             </div>
         </div>
 
+        <div class="flex-list">
+            <h3 class="text-center">Data</h3>
+
+            <div class="list-group">
+                <a href="{{ url_for('validator.list_blocks') }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    List blocks
+                    <span class="pl-1 badge badge-primary">
+                        <i class="fas fa-download"></i>
+                        <i class="spinner-border spinner-border-sm text-light d-none" role="status"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+
     </div>
 
 </main>
