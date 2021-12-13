@@ -22,4 +22,4 @@ urllib3==1.24.2
 Werkzeug==0.15.3
 wrapt==1.11.1
 git+https://github.com/adamb70/RomUtilityScripts.git
-lxml==4.3.3
+lxml==4.6.5
